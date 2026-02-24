@@ -4,24 +4,24 @@ const PILLARS = [
   {
     index: "01",
     title: "Systems over tactics",
-    desc:  "We build repeatable growth frameworks, not one-off campaigns that spike and disappear.",
+    desc: "We build repeatable growth frameworks, not one-off campaigns that spike and disappear.",
   },
   {
     index: "02",
     title: "Clarity over complexity",
-    desc:  "Simple strategies executed with surgical precision consistently outperform complicated chaos.",
+    desc: "Simple strategies executed with surgical precision consistently outperform complicated chaos.",
   },
   {
     index: "03",
     title: "Partnership over projects",
-    desc:  "We succeed when you succeed. Fully aligned incentives, every engagement.",
+    desc: "We succeed when you succeed. Fully aligned incentives, every engagement.",
   },
 ];
 
 const FACTS = [
-  { value: "2019", label: "Founded"          },
-  { value: "4",    label: "Core Disciplines"  },
-  { value: "3",    label: "Continents Active" },
+  { value: "2019", label: "Founded" },
+  { value: "4", label: "Core Disciplines" },
+  { value: "3", label: "Continents Active" },
 ];
 
 export default function About() {
@@ -31,18 +31,14 @@ export default function About() {
       className="relative overflow-hidden section-pad"
       style={{ background: "var(--bg-secondary)" }}
     >
-      {/* Subtle grid */}
       <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
 
-      {/* Accent orb — top left */}
       <div
         className="orb orb-accent absolute w-[500px] h-[500px] -top-32 -left-32 pointer-events-none"
         style={{ opacity: 0.5 }}
       />
 
       <div className="container-site relative z-10">
-
-        {/* ── Section label ── */}
         <div className="reveal flex items-center gap-4 mb-20">
           <div className="w-6 h-px" style={{ background: "var(--accent)" }} />
           <span className="type-label">About Us</span>
@@ -52,34 +48,28 @@ export default function About() {
           />
         </div>
 
-        {/* ── Main grid ── */}
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-
-          {/* ──────── Left — Visual ──────── */}
           <div className="reveal relative">
-
-            {/* Stacked quote / manifesto card */}
             <div
               className="border-shimmer relative p-10 mb-6"
               style={{
-                background:   "var(--bg-elevated)",
+                background: "var(--bg-elevated)",
                 borderRadius: "4px",
-                border:       "1px solid var(--border-visible)",
+                border: "1px solid var(--border-visible)",
               }}
             >
-              {/* Opening quote mark */}
               <div
                 style={{
-                  fontFamily:  "var(--font-display)",
-                  fontSize:    "8rem",
-                  lineHeight:  0.8,
-                  color:       "var(--accent)",
-                  opacity:     0.15,
-                  position:    "absolute",
-                  top:         "1.5rem",
-                  left:        "2rem",
+                  fontFamily: "var(--font-display)",
+                  fontSize: "8rem",
+                  lineHeight: 0.8,
+                  color: "var(--accent)",
+                  opacity: 0.15,
+                  position: "absolute",
+                  top: "1.5rem",
+                  left: "2rem",
                   pointerEvents: "none",
-                  userSelect:  "none",
+                  userSelect: "none",
                 }}
                 aria-hidden
               >
@@ -89,14 +79,14 @@ export default function About() {
               <p
                 className="relative z-10"
                 style={{
-                  fontFamily:   "var(--font-display)",
-                  fontWeight:   300,
-                  fontStyle:    "italic",
-                  fontSize:     "clamp(1.4rem, 3vw, 1.85rem)",
-                  lineHeight:   1.4,
-                  color:        "var(--text-primary)",
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 300,
+                  fontStyle: "italic",
+                  fontSize: "clamp(1.4rem, 3vw, 1.85rem)",
+                  lineHeight: 1.4,
+                  color: "var(--text-primary)",
                   letterSpacing: "-0.01em",
-                  paddingTop:   "1.5rem",
+                  paddingTop: "1.5rem",
                 }}
               >
                 We build growth systems,{" "}
@@ -104,34 +94,54 @@ export default function About() {
                 The difference compounds.
               </p>
 
-              {/* Attribution */}
               <div className="mt-8 flex items-center gap-4">
                 <div
                   className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
                   style={{
-                    background: "linear-gradient(135deg, rgba(0,200,255,0.2), rgba(0,200,255,0.05))",
+                    background:
+                      "linear-gradient(135deg, rgba(0,200,255,0.2), rgba(0,200,255,0.05))",
                     border: "1px solid var(--border-accent)",
                   }}
                 >
-                  <span style={{ fontFamily: "var(--font-body)", fontWeight: 500, fontSize: "0.75rem", color: "var(--accent)" }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontWeight: 500,
+                      fontSize: "0.75rem",
+                      color: "var(--accent)",
+                    }}
+                  >
                     B
                   </span>
                 </div>
                 <div>
-                  <div style={{ fontFamily: "var(--font-body)", fontWeight: 500, fontSize: "0.8rem", color: "var(--text-primary)" }}>
+                  <div
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontWeight: 500,
+                      fontSize: "0.8rem",
+                      color: "var(--text-primary)",
+                    }}
+                  >
                     Blockstein
                   </div>
-                  <div className="type-label" style={{ fontSize: "0.6rem", marginTop: "2px" }}>
+                  <div
+                    className="type-label"
+                    style={{ fontSize: "0.6rem", marginTop: "2px" }}
+                  >
                     Founding Philosophy
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Fact row */}
             <div
               className="grid grid-cols-3 gap-px"
-              style={{ background: "var(--border-subtle)", borderRadius: "4px", overflow: "hidden" }}
+              style={{
+                background: "var(--border-subtle)",
+                borderRadius: "4px",
+                overflow: "hidden",
+              }}
             >
               {FACTS.map((f) => (
                 <div
@@ -141,12 +151,12 @@ export default function About() {
                 >
                   <div
                     style={{
-                      fontFamily:    "var(--font-display)",
-                      fontWeight:    300,
-                      fontSize:      "2rem",
-                      color:         "var(--text-primary)",
+                      fontFamily: "var(--font-display)",
+                      fontWeight: 300,
+                      fontSize: "2rem",
+                      color: "var(--text-primary)",
                       letterSpacing: "-0.02em",
-                      lineHeight:    1,
+                      lineHeight: 1,
                     }}
                   >
                     {f.value}
@@ -158,28 +168,26 @@ export default function About() {
               ))}
             </div>
 
-            {/* Thin accent line detail */}
             <div
               className="mt-6 h-px"
               style={{
-                background: "linear-gradient(90deg, var(--accent), transparent 60%)",
+                background:
+                  "linear-gradient(90deg, var(--accent), transparent 60%)",
                 opacity: 0.4,
               }}
             />
           </div>
 
-          {/* ──────── Right — Copy ──────── */}
           <div>
-            {/* Headline */}
             <h2 className="reveal mb-8">
               <span
                 className="block"
                 style={{
-                  fontFamily:    "var(--font-display)",
-                  fontWeight:    300,
-                  fontSize:      "clamp(2.75rem, 5vw, 4rem)",
-                  lineHeight:    1.05,
-                  color:         "var(--text-primary)",
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 300,
+                  fontSize: "clamp(2.75rem, 5vw, 4rem)",
+                  lineHeight: 1.05,
+                  color: "var(--text-primary)",
                   letterSpacing: "-0.01em",
                 }}
               >
@@ -188,12 +196,12 @@ export default function About() {
               <span
                 className="block"
                 style={{
-                  fontFamily:    "var(--font-display)",
-                  fontStyle:     "italic",
-                  fontWeight:    300,
-                  fontSize:      "clamp(2.75rem, 5vw, 4rem)",
-                  lineHeight:    1.05,
-                  color:         "var(--accent)",
+                  fontFamily: "var(--font-display)",
+                  fontStyle: "italic",
+                  fontWeight: 300,
+                  fontSize: "clamp(2.75rem, 5vw, 4rem)",
+                  lineHeight: 1.05,
+                  color: "var(--accent)",
                   letterSpacing: "-0.01em",
                 }}
               >
@@ -201,21 +209,23 @@ export default function About() {
               </span>
             </h2>
 
-            {/* Body copy */}
-            <div className="reveal space-y-5 mb-14" style={{ delay: "0.1s" }}>
+            {/* FIXED HERE */}
+            <div
+              className="reveal space-y-5 mb-14"
+              style={{ transitionDelay: "0.1s" }}
+            >
               <p className="type-body text-base leading-relaxed">
                 We're not an agency that churns out campaigns. We're strategic
                 partners who build growth systems — structured approaches that
                 create compounding returns over time.
               </p>
               <p className="type-body text-base leading-relaxed">
-                Founded by operators who've scaled companies from zero to
-                eight figures, we understand the difference between tactics
-                that spike and strategies that sustain.
+                Founded by operators who've scaled companies from zero to eight
+                figures, we understand the difference between tactics that spike
+                and strategies that sustain.
               </p>
             </div>
 
-            {/* Pillars */}
             <div className="reveal space-y-0">
               {PILLARS.map((p, i) => (
                 <div
@@ -223,33 +233,34 @@ export default function About() {
                   className="group relative flex gap-6 py-6"
                   style={{
                     borderTop: "1px solid var(--border-subtle)",
-                    borderBottom: i === PILLARS.length - 1 ? "1px solid var(--border-subtle)" : "none",
+                    borderBottom:
+                      i === PILLARS.length - 1
+                        ? "1px solid var(--border-subtle)"
+                        : "none",
                   }}
                 >
-                  {/* Index */}
                   <span
                     className="flex-shrink-0 mt-0.5 transition-colors duration-300 group-hover:text-[var(--accent)]"
                     style={{
-                      fontFamily:    "var(--font-body)",
-                      fontWeight:    300,
-                      fontSize:      "0.65rem",
+                      fontFamily: "var(--font-body)",
+                      fontWeight: 300,
+                      fontSize: "0.65rem",
                       letterSpacing: "0.1em",
-                      color:         "var(--text-muted)",
-                      lineHeight:    1.6,
+                      color: "var(--text-muted)",
+                      lineHeight: 1.6,
                     }}
                   >
                     {p.index}
                   </span>
 
-                  {/* Content */}
                   <div>
                     <h4
                       className="mb-1.5 transition-colors duration-300 group-hover:text-[var(--accent)]"
                       style={{
                         fontFamily: "var(--font-body)",
                         fontWeight: 500,
-                        fontSize:   "0.9375rem",
-                        color:      "var(--text-primary)",
+                        fontSize: "0.9375rem",
+                        color: "var(--text-primary)",
                         letterSpacing: "-0.01em",
                       }}
                     >
@@ -259,8 +270,8 @@ export default function About() {
                       style={{
                         fontFamily: "var(--font-body)",
                         fontWeight: 300,
-                        fontSize:   "0.8375rem",
-                        color:      "var(--text-muted)",
+                        fontSize: "0.8375rem",
+                        color: "var(--text-muted)",
                         lineHeight: 1.65,
                       }}
                     >
@@ -268,7 +279,6 @@ export default function About() {
                     </p>
                   </div>
 
-                  {/* Hover accent line */}
                   <div
                     className="absolute left-0 top-0 w-px h-0 group-hover:h-full transition-all duration-500"
                     style={{ background: "var(--accent)", opacity: 0.6 }}
